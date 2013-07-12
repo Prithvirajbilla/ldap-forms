@@ -10,15 +10,19 @@
 </head>
 <body>
 	<div class="container">
+    <?php include('login.php') ?>
+	<?php if($login == true) { ?>
 		<div class="page-header" style="text-align:center">
 			<h1> Login Here with you LDAP ID</h1>
 			<p>
 			<small> We don't save your passwords</small>
 		</p>
 		</div>
+
+		
 		<div class="row">
 			<div class="span4 offset2">
-				<form class="form-horizontal" id="login" action="login.php" method="post">
+				<form class="form-horizontal" id="login"  method="post">
 				  <div class="control-group">
 				    <label class="control-label" for="ldap_id">LDAP_ID</label>
 				    <div class="controls">
@@ -33,13 +37,21 @@
 				  </div>
 				  <div class="control-group">
 				    <div class="controls">
-				      <button type="submit" class="btn">Authenticate</button>
-				    </div>
+				      <input type="hidden" name="submitted" value="0" />
+				      <button type="submit" name="login" class="btn">Authenticate</button>
+				     <div style="text-align:center;width:220px">
+						<p class="text-warning"><?php echo $error_login ?> </p> 
+					</div>
+					</div>
+
 				  </div>
 				</form>
 			</div>
 		</div>
+		<?php } ?>
 		<?php include 'slot.php' ; ?>
+
+        <?php if($authenticated == true) {?>		
 		<div class="page-header" style="text-align:center">
 			<h3> Online slot cleaning system</h3>
 		</div>
@@ -96,6 +108,7 @@ $("#slot").validate();
 </script>
 
 			</div>
+			<?php } ?>
 		</div>
 
 	</div>
