@@ -33,11 +33,7 @@
 			}
 			else
 			{
-				$error_login = "There is a problem connecting to server or Wrong password";
-				
-				$authenticated = true;
-				$login = false;
-				
+				$error_login = "There is a problem connecting to server or Wrong password";				
 
 			}
 		}
