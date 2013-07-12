@@ -61,7 +61,7 @@
 				  <div class="control-group">
 				    <label class="control-label" for="slot">Slot for cleaning</label>
 				    <div class="controls">
-				    	<select name="slot" multiple class="selectpicker">
+				    	<select name="slot[]" multiple class="selectpicker">
 						  <option value="9" selected="selected">9:00 to 9:30 (am)</option>
 						  <option value="9.5">9:30 to 10:00 (am)</option>
 						  <option value="10">10:00 to 10:30 (am)</option>
