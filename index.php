@@ -39,9 +39,13 @@
 				</form>
 			</div>
 		</div>
+		<?php include 'slot.php' ; ?>
+		<div class="page-header" style="text-align:center">
+			<h3> Online slot cleaning system</h3>
+		</div>
 		<div class="row" id="slotscript">
 			<div class="span4 offset2">
-				<form class="form-horizontal" id="slot" action="slot.php" method="post">
+				<form class="form-horizontal" id="slot"  method="post">
 				  <div class="control-group">
 				    <label class="control-label" for="room No">Room No</label>
 				    <div class="controls">
@@ -80,6 +84,7 @@
 				  </div>
 				  <div class="control-group">
 				    <div class="controls">
+				       <input type="hidden" name="submitted" value="1" />
 				      <button type="submit" class="btn">Submit</button>
 				    </div>
 				  </div>
